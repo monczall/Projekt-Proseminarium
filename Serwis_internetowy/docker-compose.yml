@@ -1,0 +1,24 @@
+version: '2'
+services:
+  app-service-s:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: php
+    ports:
+      - "80:80"
+    networks:
+      s1-network:
+        aliases:
+          - appkaservice
+      wspolna:
+        ipv4_address: '10.1.0.200'
+
+networks:
+  s1-network:
+  wspolna:
+    name: wspolna
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/24

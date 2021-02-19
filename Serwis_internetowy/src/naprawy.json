@@ -1,0 +1,52 @@
+{
+    "Naprawy":[
+    {
+        "stan_naprawy":"Przyjęto zlecenie",
+        "poczatek":"2021-02-11",
+        "data_przyjecia":"2021-02-02",
+        "opis_usterki":"opona do zmiany",
+        "marka":"Subaru",
+        "model":"Impreza",
+        "koniec":"2021-02-11",
+        "rok_produkcji":"2006",
+        "id_uzytkownika":"22",
+        "opis_naprawy":"sdfasdfas"
+    },
+    {
+        "stan_naprawy":"Przyjęto zlecenie",
+        "poczatek":"2021-02-15",
+        "data_przyjecia":"2021-02-02",
+        "opis_usterki":"opona do zmiany",
+        "marka":"Subaru",
+        "model":"Impreza",
+        "koniec":"2021-02-15",
+        "rok_produkcji":"2006",
+        "id_uzytkownika":"22",
+        "opis_naprawy":""
+    },
+    {
+        "stan_naprawy":"Przyjęto zlecenie",
+        "poczatek":"2021-02-17",
+        "data_przyjecia":"2021-02-02",
+        "opis_usterki":"opona do zmiany",
+        "marka":"Subaru",
+        "model":"Impreza",
+        "koniec":"2021-02-21",
+        "rok_produkcji":"2006",
+        "id_uzytkownika":"60077a19b46f4d0568ca8711",
+        "opis_naprawy":"basbdabdbasjbdasbdb"
+    },
+    {
+        "stan_naprawy":"Przyjęto zlecenie",
+        "poczatek":"2021-02-24",
+        "data_przyjecia":"2021-02-02",
+        "opis_usterki":"opona do zmiany",
+        "marka":"Subaru",
+        "model":"Impreza",
+        "koniec":"2021-02-28",
+        "rok_produkcji":"2006",
+        "id_uzytkownika":"60077a19b46f4d0568ca8711",
+        "opis_naprawy":"basbdabdbasjbdasbdb id ihsui hasiuhs siuhd ish hda hpsah dih aas his hdahd"
+    }
+]
+}

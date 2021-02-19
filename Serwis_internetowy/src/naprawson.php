@@ -1,0 +1,1 @@
+{"Naprawa":[{"id_uzytkownika": "60077a19b46f4d0568ca8711", "marka": "Alfa Romeo", "model": "dsad", "rok_produkcji": "2021", "data_przyjecia_naprawy": "2021-02-19", "opis_usterki": " dsad", "planowany_poczatek_naprawy": "2021-02-19", "planowany_koniec_naprawy": "2021-02-19"}]}
