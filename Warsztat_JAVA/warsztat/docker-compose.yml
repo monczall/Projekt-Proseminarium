@@ -1,0 +1,89 @@
+version: '2'
+services:
+  app-service-w1:
+    build:
+      context: .
+      dockerfile: Dockerfile-w1
+
+    ports:
+      - "8080:8080"
+    networks:
+      w1-network:
+        aliases:
+          - appservice
+      wspolna:
+        ipv4_address: '10.1.0.210'
+
+    depends_on:
+      - db-service-w1
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbservice:5432/Warsztat1
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+
+  db-service-w1:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=Warsztat1
+    networks:
+      w1-network:
+        aliases:
+          - dbservice
+      wspolna:
+
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - ./warsztat_export.sql:/docker-entrypoint-initdb.d/warsztat_export.sql
+
+  app-service-w2:
+    build:
+      context: .
+      dockerfile: Dockerfile-w2
+
+    ports:
+      - "8081:8081"
+    networks:
+      w2-network:
+        aliases:
+          - appservice
+      wspolna:
+        ipv4_address: '10.1.0.211'
+
+    depends_on:
+      - db-service-w2
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbservice:5432/Warsztat2
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+
+  db-service-w2:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=Warsztat2
+    networks:
+      w2-network:
+        aliases:
+          - dbservice
+      wspolna:
+
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - ./warsztat_export.sql:/docker-entrypoint-initdb.d/warsztat_export.sql
+
+networks:
+  w1-network:
+  w2-network:
+  wspolna:
+    name: wspolna
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/24

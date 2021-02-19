@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/edit.css}"/>
+    <title>Warsztat 1</title>
+</head>
+<body>
+
+<div id="content">
+    <div id="odstpet"></div>
+    <div id="baner">
+        <a th:href="@{/login}">
+            <div id="logo">
+                <div id="logo_text">
+                    Warsztat
+                </div>
+                <div id="logo_text2">
+                    Fix your car
+                </div>
+            </div>
+        </a>
+
+        <a th:href="@{/logout}">
+            <div id="wyloguj"><i class="fas fa-power-off"></i>Wyloguj</div>
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a th:href="@{/login}">Strona główna</a></li>
+            <li style="float:right;">
+                <div class="daned"><span th:text="${session.login}"></span>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+    <div id="tresc">
+        <div class="odstepgora"></div>
+        <div id="tekstkonto">Edycja</div>
+        <div id="infokonto">
+
+
+            <div id="textcenter">Zmodyfikowano informacje</div>
+
+
+
+
+
+        </div>
+    </div>
+    <div id="stopka">
+        STOPKA COPYRAJT @ NIE MOJE
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,461 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+*{
+    margin:0;
+}
+
+body{
+    background-color:#292929;
+    text-decoration:none;
+}
+
+#content{
+    min-height: 100vh;
+    background-color:#292929;
+}
+
+#stopka{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    border-top:1px solid #141414;
+    text-align:center;
+    line-height:50px;
+    color:#737373;
+}
+
+#odstpet{
+    width:100%;
+    height:10px;
+}
+
+#baner{
+    width:1100px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#logo{
+    width:200px;
+    height:70px;
+    background-color:darkgreen;
+    font-family:"Segoe UI";
+    margin-left:40px;
+}
+
+#logo_text{
+    color:#fff;
+    font-weight:600;
+    float:left;
+    width:95%;
+    height:35px;
+    font-size:20px;
+    border-bottom:1px solid #fff;
+    padding:0 0 0 10px;
+}
+
+#logo_text2{
+    color:#fff;
+    float:left;
+    width:90%;
+    height:15px;
+    text-align:right;
+    font-size:18px;
+}
+
+.daned{
+    float:left;
+    margin-right:5px;
+    margin-left:10px;
+    color:#fff;
+    width:100%;
+    float:right;
+    text-align:right;
+    font-size:18px;
+    padding:2px 15px 0 0;
+}
+
+#wyloguj{
+    float:right;
+    font-size:21px;
+    color:darkgreen;
+    cursor:pointer;
+}
+
+#wyloguj i{
+    margin-right:5px;
+}
+
+#menu{
+    width:1600px;
+    height:50px;
+    background-color:#1f1f1f;
+    margin-top:50px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid #1a1a1a;
+    border-bottom:0;
+}
+
+#tresc{
+    width:1600px;
+    min-height:650px;
+    background-color:#121212;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid #1a1a1a;
+    border-top:0;
+}
+
+ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li a {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 1.2em;
+    width: 130px;
+    text-decoration: none;
+    color:#Fff;
+    background-color:#191f24;
+    width:200px;
+    height:50px;
+    line-height:50px;
+    margin: 0px 1px 1px 0px;
+    border-right:1px solid #121212;
+
+}
+
+li a:hover {
+    background: #232a31;
+}
+
+.odstepgora{
+    clear: both;
+    width:100%;
+    height:30px;
+}
+
+#tekstkonto{
+    width:1000px;
+    height:40px;
+    font-size:25px;
+
+    margin-left: 30px;
+    font-family:"Segoe UI";
+    color:#fff;
+}
+
+#infokonto{
+    width:1550px;
+    height:550px;
+    background-color:#1e1e1e;
+    border-radius:3px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family:"Segoe UI";
+    border:1px solid #292929;
+}
+
+.lewa {
+    float: left;
+    height:500px;
+    width: 775px;
+    font-family:"Segoe UI";
+
+}
+.prawa {
+    float: left;
+    height:500px;
+    width: 775px;
+    font-family:"Segoe UI";
+
+}
+
+#sekcja1{
+    float:left;
+    width:300px;
+    height:100%;
+}
+
+#nazwakonta{
+    margin-left:30px;
+    margin-top:20px;
+    color:#3277b3;
+}
+
+
+
+#sekcja2{
+    float:left;
+    width:240px;
+    height:15%;
+    text-align:center;
+    color:#525252;
+}
+
+.srodki{
+    margin-top:20px;
+    color:#d1d1d1;
+}
+
+
+
+
+
+#sekcja3{
+    margin-left:50px;
+    float:left;
+    width:240px;
+    height:15%;
+    text-align:center;
+
+}
+#sekcja4{
+    margin-left:50px;
+    float:left;
+    width:240px;
+    height:15%;
+    text-align:center;
+
+}
+#sekcja5{
+    float:left;
+    width:200px;
+    height:100%;
+    text-align:right;
+
+}
+.rekord {
+    clear:both;
+    float:left;
+    width:100%;
+    height:50px;
+}
+
+#marka {
+
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#model {
+    margin-left:30px;
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#wpisane {
+
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#rok_produkcji {
+    margin-left:30px;
+    float:left;
+    width:190px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#opis_usterki {
+    margin-left:50px;
+    float:left;
+    width:270px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#opis_naprawy {
+    margin-left:200px;
+    float:left;
+    width:270px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#stan_naprawy {
+    margin-left:30px;
+    float:left;
+    width:270px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#planowany_poczatek_naprawy {
+    clear: both;
+    margin-left:200px;
+    float:left;
+    width:270px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#planowany_koniec_naprawy {
+    margin-left:30px;
+    float:left;
+    width:270px;
+    height:20%;
+    text-align:center;
+    color:wheat;
+}
+
+#edycja {
+    margin-left:470px;
+
+}
+
+#parts {
+    margin-left:450px;
+
+}
+
+#textcenter {
+
+    font-size: 50px;
+    padding-top: 200px;
+    color: lawngreen;
+    text-align: center;
+
+}
+
+
+
+textarea {
+    resize: none;
+    font-family: Tahoma, sans-serif;
+}
+
+#nazwa {
+    margin-left:30px;
+    float:left;
+    width:190px;
+    height:10%;
+    text-align:center;
+    color:white;
+}
+
+#ilosc {
+
+    float:left;
+    width:190px;
+    height:10%;
+    text-align:center;
+    color:white;
+}
+
+#dostep {
+
+    float:left;
+    width:190px;
+    height:10%;
+    text-align:center;
+    color:white;
+}
+
+#nazwa_baza {
+    margin-left: 300px;
+    float:left;
+    width:190px;
+    height:10%;
+    text-align:center;
+    color:white;
+}
+
+#ilosc_baza {
+
+    float:left;
+    width:190px;
+    height:10%;
+    text-align:center;
+    color:white;
+}
+
+.scrool {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+}
+.scrool::-webkit-scrollbar {
+    display: none;
+}
+
+#naz {
+    margin-left: 300px;
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#ilo {
+
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#marka1 {
+
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#model1 {
+    margin-left:30px;
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#wpisane1 {
+
+    float:left;
+    width:190px;
+    height:100%;
+    text-align:center;
+    color:wheat;
+}
+
+#edycja1 {
+    margin-left:470px;
+
+}
+
+.hurtownia {
+    float:left;
+    width:100%;
+    height:40px;
+    text-align:center;
+    color:white;
+
+}

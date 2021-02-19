@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>Warsztat 1</title>
+</head>
+<body>
+<div id="content">
+    <div id="odstpet"></div>
+    <a href="/"><div id="logo">
+        <div id="logo_text">
+            Warsztat
+        </div>
+        <div id="logo_text2">
+            Fix your car
+        </div>
+    </div></a>
+    <div id="logowanie">
+        <div id="tekst_login">
+            Logowanie
+        </div>
+        <form action="#" th:action="@{/login}" method="post">
+            <div id="dane_login">
+                <div id="llogin">
+                    <div id="logintext">Login</div>
+                    <input type="text" class="dane" name="login" />
+                </div>
+                <div id="haslo">
+                    <div id="haslotext">Hasło</div>
+                    <input type="password" class="dane" name="password" />
+                </div>
+                <span th:if="${session.bladLogowania == true}" style="color:red; float:left; width:100%; height:10px; text-align:center;">Nieprawidłowy login lub haslo!</span>
+
+            </div>
+            <div id="przycisk">
+                <input type="submit" value="Zaloguj" name="zaloguj">
+            </div>
+        </form>
+    </div>
+
+    <div id="stopka">
+        STOPKA COPYRAJT @ NIE MOJE
+    </div>
+</div>
+</body>
+</html>

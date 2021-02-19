@@ -1,0 +1,136 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/parts.css}"/>
+    <title>Warsztat 2</title>
+</head>
+<body>
+
+<div id="content">
+    <div id="odstpet"></div>
+    <div id="baner">
+        <a th:href="@{/login}">
+            <div id="logo">
+                <div id="logo_text">
+                    Warsztat
+                </div>
+                <div id="logo_text2">
+                    Fix your car
+                </div>
+            </div>
+        </a>
+
+        <a th:href="@{/logout}">
+            <div id="wyloguj"><i class="fas fa-power-off"></i>Wyloguj</div>
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a th:href="@{/login}">Strona główna</a></li>
+            <li style="float:right;">
+                <div class="daned"><span th:text="${session.login}"></span>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+    <div id="tresc">
+        <div class="odstepgora"></div>
+        <div id="tekstkonto">Części</div>
+        <div id="infokonto">
+
+            <div class="lewa">
+
+                <input type="hidden" th:value="${id_naprawy}" name="id_naprawy"/>
+
+                <div class="odstepgora"></div>
+
+
+
+
+                <div id="nazwa">Nazwa części</div>
+                <div id="ilosc">Dostępana ilość:</div>
+                <div id="dostep">Wpisz ilość:</div>
+
+                <div class="scrool">
+
+                    <div class="hurtownia">Hurtownia 1</div>
+                    <div class="rekord" th:each="part : ${part}" >
+
+                        <form action="#" th:action="@{/add_parts}" method="post">
+
+                            <input type="hidden" th:value="${id_naprawy}" name="id_naprawy"/>
+
+                            <input type="hidden" th:value="${part.hurtownia_id}" name="hurtownia_id"/>
+                            <input type="hidden" th:value="${part.id}" name="id"/>
+                            <input type="hidden" th:value="${part.nazwa}" name="nazwa"/>
+
+                            <div id="model" th:text="${part.nazwa}"></div>
+                            <div id="marka" th:text="${part.ilosc}"></div>
+                            <div id="wpisane"><input type="number"  min="1" name="ilosc"></div>
+                            <div id="edycja"><input type="submit" value="Dodaj części" name="dodaj"></div>
+                        </form>
+
+                    </div>
+
+                    <div class="hurtownia">Hurtownia 2</div>
+                    <div class="rekord" th:each="part1 : ${part1}" >
+
+                        <form action="#" th:action="@{/add_parts}" method="post">
+
+                            <input type="hidden" th:value="${id_naprawy}" name="id_naprawy"/>
+
+                            <input type="hidden" th:value="${part1.hurtownia_id}" name="hurtownia_id"/>
+                            <input type="hidden" th:value="${part1.id}" name="id"/>
+                            <input type="hidden" th:value="${part1.nazwa}" name="nazwa"/>
+
+                            <div id="model1" th:text="${part1.nazwa}"></div>
+                            <div id="marka1" th:text="${part1.ilosc}"></div>
+                            <div id="wpisane1"><input type="number"  min="1" name="ilosc"></div>
+                            <div id="edycja1"><input type="submit" value="Dodaj części" name="dodaj"></div>
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="odstepgora"></div>
+
+
+            </div>
+
+            <div class="prawa">
+
+
+
+                <input type="hidden" th:value="${id_naprawy}" name="id_naprawy"/>
+
+                <div class="odstepgora"></div>
+                <div id="nazwa_baza">Nazwa części:</div>
+                <div id="ilosc_baza">Potrzbna ilość:</div>
+
+                <div class="scrool">
+
+                    <div class="rekord" th:each="naprawa_baza : ${naprawa_baza}" >
+
+                        <div id="naz" th:text="${naprawa_baza.nazwa}"></div>
+                        <div id="ilo" th:text="${naprawa_baza.ilosc}"></div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="stopka">
+        STOPKA COPYRAJT @ NIE MOJE
+    </div>
+</div>
+</body>
+</html>

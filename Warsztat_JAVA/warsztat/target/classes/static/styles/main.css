@@ -1,0 +1,204 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+*{
+    margin:0;
+}
+
+body{
+    background-color:#292929;
+    text-decoration:none;
+}
+
+#content{
+    min-height: 100vh;
+}
+
+#stopka{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    border-top:1px solid #141414;
+    text-align:center;
+    line-height:50px;
+    color:#737373;
+}
+
+#odstpet{
+    height:20px;
+    width:100%;
+}
+
+#logo{
+    width:400px;
+    height:130px;
+    background-color:darkgreen;
+    font-family:"Segoe UI";
+    margin-left:100px;
+}
+
+#logo_text{
+    color:#fff;
+    font-weight:600;
+    float:left;
+    width:98%;
+    height:60px;
+    font-size:40px;
+    border-bottom:1px solid #fff;
+    padding:0 0 0 10px;
+}
+
+#logo_text2{
+    color:#fff;
+    float:left;
+    width:90%;
+    height:20px;
+    text-align:right;
+    font-size:28px;
+}
+
+#logowanie{
+    width:500px;
+    height:350px;
+    font-family:"Segoe UI";
+    color:#000;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:150px;
+    border:1px solid #141414;
+    background-color:#1e1e1e;
+}
+
+#tekst_login{
+    width:100%;
+    text-align:center;
+    font-size:30px;
+    height:90px;
+    line-height:70px;
+    color:#fff;
+}
+
+#dane_login{
+    width:100%;
+
+}
+
+#llogin{
+    float:left;
+    width:70%;
+    font-size:24px;
+    height:80px;
+    margin-left:20px;
+}
+
+#logintext{
+    width:100%;
+    float:left;
+    height:40px;
+    margin-left:80px;
+    color:#fff;
+}
+
+input[type=text]{
+    float:left;
+    border:1px solid #ccc;
+    font-size:20px;
+    border-radius:4px;
+    box-sizing:border-box;
+    transition:.3s;
+    outline:none;
+    padding:2 5;
+    margin-left:80px;
+}
+
+input[type=text]:focus{
+    border-color:orange;
+    box-shadow:0 0 8px 0 orange;
+}
+
+input[type=password]{
+    float:left;
+    border:1px solid #ccc;
+    font-size:20px;
+    border-radius:4px;
+    box-sizing:border-box;
+    transition:.3s;
+    outline:none;
+    padding:2 5;
+    margin-left:80px;
+}
+
+input[type=password]:focus{
+    border-color:orange;
+    box-shadow:0 0 8px 0 orange;
+}
+
+#haslo{
+    float:left;
+    width:70%;
+    font-size:24px;
+    height:90px;
+    margin-left:20px;
+}
+
+#haslotext{
+    width:100%;
+    float:left;
+    height:40px;
+    margin-left:80px;
+    color:#fff;
+}
+
+
+#przycisk{
+    float:left;
+    width:100%;
+    height:50px;
+    margin-top:25px;
+}
+
+#przycisk input{
+    border:0;
+    background-color:darkgreen;
+    color:#fff;
+    font-size:18px;
+    width:100px;
+    height:40px;
+    border-radius:4px;
+    font-family:"Verdana";
+    float:right;
+    margin-right:85px;
+}
+
+#przycisk input:hover{
+    border:2px solid darkgreen;
+    background-color:#fff;
+    color:darkgreen;
+    cursor:pointer;
+}
+
+#przyciskrej{
+    width:250px;
+    height:100px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:50px;
+}
+
+#przyciskrej input{
+    border:0;
+    background-color:darkgreen;
+    color:#fff;
+    font-size:18px;
+    width:250px;
+    height:50px;
+    border-radius:4px;
+    font-family:"Verdana";
+    float:right;
+}
+
+#przyciskrej input:hover{
+    border:2px solid darkgreen;
+    background-color:#fff;
+    color:darkgreen;
+    cursor:pointer;
+}

@@ -1,0 +1,83 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/styles/login.css}"/>
+    <title>Warsztat 2</title>
+</head>
+<body>
+
+<div id="content">
+    <div id="odstpet"></div>
+    <div id="baner">
+        <a th:href="@{/login}">
+            <div id="logo">
+                <div id="logo_text">
+                    Warsztat
+                </div>
+                <div id="logo_text2">
+                    Fix your car
+                </div>
+            </div>
+        </a>
+
+        <a th:href="@{/logout}">
+            <div id="wyloguj"><i class="fas fa-power-off"></i>Wyloguj</div>
+        </a>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a th:href="@{/login}">Strona główna</a></li>
+            <li style="float:right;">
+                <div class="daned"><span th:text="${session.login}"></span>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+    <div id="tresc">
+        <div id="odstepgora"></div>
+        <div id="tekstkonto">Naprawy</div>
+        <div id="infokonto">
+
+
+            <div id="sekcja2">
+                <div class="srodki">
+                    <h3>Marka</h3>
+                </div>
+
+            </div>
+            <div id="sekcja3">
+                <div class="srodki">
+                    <h3>Model</h3>
+                </div>
+
+            </div>
+            <div id="sekcja4">
+                <div class="srodki">
+                    <h3>Data przyjęcia naprawy</h3>
+                </div>
+
+            </div>
+
+            <div class="scrool">
+            <div class="rekord" th:each="naprawa : ${naprawa}">
+
+                <div id="marka" th:text="${naprawa.marka}"></div>
+                <div id="model" th:text="${naprawa.model}"></div>
+                <div id="data" th:text="${naprawa.data_przyjecia_naprawy}"></div>
+
+                <form action="#" th:action="@{/edit}" method="post">
+                    <input type="hidden" th:value="${naprawa.id_naprawy}" name="id_naprawy"/>
+                    <div id="edycja"><input type="submit" value="Edytuj" name="edytuj"></div>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="stopka">
+        STOPKA COPYRAJT @ NIE MOJE
+    </div>
+</div>
+</body>
+</html>
