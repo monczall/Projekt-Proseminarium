@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet"/>
+    <title>Hurtownia 2</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/add}" method="post">
+    <center><h2>Dodawanie nowych</h2></center>
+    <center>
+        <input type="text" name="name" placeholder="Podaj nazwe"/>
+        <input type="number" name="amount" placeholder="Podaj ilość"/>
+        <input type="submit" value="ok" name="submit"/>
+    </center>
+
+</form>
+
+<div class="blank_space"></div>
+
+<form action="#" th:action="@{/orders}" method="post">
+
+    <center>
+
+
+        <input type="submit" value="Zamówienia" name="submit"/>
+    </center>
+
+</form>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa</th>
+        <th>Ilość</th>
+        <th>Zwiększ ilość</th>
+    </tr>
+    <form action="#" th:action="@{/addNumber}" method="post" th:each="czesc : ${parts}">
+        <tr>
+            <td><span th:text="${czesc.id}"></span><input type="hidden" th:value="${czesc.id}" name="id"></td>
+            <td><span th:text="${czesc.nazwa}"></span></td>
+            <td><span th:text="${czesc.ilosc}"></span><input type="hidden" th:value="${czesc.ilosc}" name="ilosc"></td>
+            <td><center><input type="number" name="ile"/>
+                <input type="submit" value="Dodaj"/></center></td>
+        </tr>
+    </form>
+</table>
+
+</body>
+</html>

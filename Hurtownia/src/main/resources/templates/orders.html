@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet"/>
+    <title>Hurtownia 2</title>
+</head>
+<body>
+<center><h1>Zamówienia</h1></center>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa</th>
+        <th>Ilość</th>
+        <th>Warsztat ID</th>
+    </tr>
+    <span th:each="order : ${orders}">
+    <tr>
+        <td><span th:text="${order.id_czesci}"></span></td>
+        <td><span th:text="${order.nazwa}"></span></td>
+        <td><span th:text="${order.ilosc}"></span></td>
+        <td><span th:text="1"></span></td>
+    </tr>
+</span>
+
+    <span th:each="order1 : ${orders1}">
+    <tr>
+        <td><span th:text="${order1.id_czesci}"></span></td>
+        <td><span th:text="${order1.nazwa}"></span></td>
+        <td><span th:text="${order1.ilosc}"></span></td>
+        <td><span th:text="2"></span></td>
+    </tr>
+</span>
+</table>
+
+
+</body>
+</html>

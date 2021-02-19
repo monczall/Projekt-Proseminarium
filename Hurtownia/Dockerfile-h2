@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/jsp-boot-h2.jar docker-spring-boot.jar
+EXPOSE 8082 8083
+ENTRYPOINT ["java","-jar","-Dserver.port=8083", "docker-spring-boot.jar"]

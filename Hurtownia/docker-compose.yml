@@ -1,0 +1,87 @@
+version: '2'
+services:
+  app-service-h1:
+    build:
+      context: .
+      dockerfile: Dockerfile-h1
+    ports:
+      - "8082:8082"
+    networks:
+      h1-network:
+        aliases:
+          - appservice
+      wspolna:
+        ipv4_address: '10.1.0.212'
+
+    depends_on:
+      - db-service-h1
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbservice:5432/Hurtownia1
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+
+  db-service-h1:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=Hurtownia1
+    networks:
+      h1-network:
+        aliases:
+          - dbservice
+      wspolna:
+
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - ./hurtownia_export.sql:/docker-entrypoint-initdb.d/hurtownia_export.sql
+
+  app-service-h2:
+    build:
+      context: .
+      dockerfile: Dockerfile-h2
+    ports:
+      - "8083:8083"
+    networks:
+      h2-network:
+        aliases:
+          - appservice
+      wspolna:
+        ipv4_address: '10.1.0.213'
+
+    depends_on:
+      - db-service-h2
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dbservice:5432/Hurtownia2
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+
+  db-service-h2:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=Hurtownia2
+    networks:
+      h2-network:
+        aliases:
+          - dbservice
+      wspolna:
+
+    #ports:
+    #  - "5432:5432"
+    volumes:
+      - ./hurtownia_export.sql:/docker-entrypoint-initdb.d/hurtownia_export.sql
+
+networks:
+  h1-network:
+  h2-network:
+  wspolna:
+    name: wspolna
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.1.0.0/24
